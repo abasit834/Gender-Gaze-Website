@@ -10,6 +10,7 @@ header{
 }
 
 header h3{
+    display: inline-block;
     padding: 20px 0 0 153px ;
     font-size: 1rem;
     font-weight: 700;
