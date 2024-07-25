@@ -37,13 +37,18 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    overflow-x: hidden ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .welcome-note-container {
-    width: 80%;
+    width: 40%;
     margin: 0 auto;
     padding: 20px;
-    
+    margin-top: 50px;
+    /* margin-left: 475px; */
 }
 
 .welcome-note-heading {
@@ -76,8 +81,17 @@ body {
 
 .image{
     height:300px;
-    width:100%;
+    margin-top:20px;
 }
+
+.image img{
+    position: relative;
+    top:2px;
+    left:12%;
+    width:90%;
+    height:100%;
+}
+
 
 .title{
     display: flex;
@@ -106,6 +120,13 @@ body {
     left:140px;
     width:250px;
     height:auto;
+}
+
+.subscribe h5{
+    position: relative;
+    top:1px;
+    right:5px;
+    cursor:pointer;
 }
 
 footer{
@@ -185,11 +206,7 @@ input:focus {
 input:focus ~ .input-border {
     width: 80%;
 }
-   /* === if you want to do animated border on typing === */
-   /* remove input:focus code and uncomment below code */
-    /* input:valid ~ .input-border{
-    width: 100%;
-   } */
+
 #icon{
     display: inline;
     position : relative;
@@ -225,8 +242,35 @@ h5{
     background: #555; /* Color of the scrollbar thumb when hovered */
 }
 
+.move{
+    width:fit-content;
+    margin-left: 290px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+        .welcome-note-container{
+            width:41%;
+        }
+
+        .move{
+            margin-left: 0px;
+        }
+}
+
 
 @media screen and (max-width: 768px) {
+
+
+    .image img{
+        left:5%;
+    }
+    .welcome-note-container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }    
 
     .title img{
         overflow-x: hidden;
@@ -267,4 +311,6 @@ h5{
         margin-left:175px;
         margin-top:50px;
     }
+
 }
+
