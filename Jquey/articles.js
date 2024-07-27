@@ -1,3 +1,26 @@
+
+$(document).ready(function() {
+    // Function to add 'in-view' class when element is visible
+    function onIntersection(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                $(entry.target).addClass('in-view');
+                observer.unobserve(entry.target); // Stop observing after adding the class
+            }
+        });
+    }
+
+    // Create a new Intersection Observer
+    let observer = new IntersectionObserver(onIntersection, {
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+
+    // Observe all elements with .animate and .animateText classes
+    $('.animate, .animateText').each(function() {
+        observer.observe(this);
+    });
+
+
 const btn=document.getElementsByClassName("card");
 
 var num = 1;
@@ -16,5 +39,8 @@ for (var i = 0; i < btn.length; i++) {
     num = (num + 1) % (len + 1);
     if (num === 0) num++;
 }
+});
+
+
 
 
