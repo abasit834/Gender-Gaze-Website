@@ -223,12 +223,14 @@ footer img{
     
     .card-container{
         justify-content: center;
+        /* align-items: center; */
+        /* width:100%; */
     }
     
     .card{
         display: inline-block;
-        width:300px;
-        height: 300px;
+        width:250px;
+        height: 250px;
         margin-left: 30px;
     }
 
