@@ -1,20 +1,83 @@
+html{
+    overflow-x: hidden;
+}
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    overflow-x: hidden;
+    width:100vw;
+    height: 100vh;
 }
 
 header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     height: 100px;
+    width: 100vw;
 }
 
 header h3{
-    padding: 20px 0 0 153px ;
+    display: inline;
+    margin-right: auto;
+    padding-left:10%;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
+}
+
+#icon {
+    font-size: 24px;
+    padding-right: 10%;
+    margin-left:auto;
+    cursor: pointer;
+}
+
+.sidebar {
+    position:fixed;
+    top: 0;
+    right: -450px;
+    width: 300px;
+    height: 100%;
+    background-color:black;
+    color: white;
+    transition: right 0.5s;
+    padding: 20px;
+    z-index: 1;
+
+}
+
+
+header ul li a:hover{
+    color: blue;
+
+}
+
+
+header ul li a{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 20px;
+   text-decoration: none;
+   color: white;
+}
+
+header ul li{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 20px;
+   
+}
+
+#close {
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.see{
+    right:0;
 }
 
 a {
@@ -32,10 +95,8 @@ a:hover, a:focus, a:active {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 100%;
     height: auto;
     gap:15px;
-    
 }
 
 .card{
@@ -44,7 +105,8 @@ a:hover, a:focus, a:active {
     height: 300px;
     border: 2px solid #c3c6ce;
     transition: 0.5s ease-out; 
-    cursor: pointer;     
+    cursor: pointer; 
+    animation: fadeIn 1.5s ease forwards;    
 }
 
 .card:hover {
@@ -96,18 +158,67 @@ h6{
 }
 
 footer{
-    margin-top:100px;
+    position: static;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height: 350px;
+    background-color: #000;
+    margin-top: 15%;
+}
+
+footer h3{
+    color: white;
+    font-family: 'Montserrat',sans-serif;
+    text-transform: uppercase;
+}
+
+footer img{
+    position: relative;
+    width:32px;
+    left:-110px;
+    top:30px;
+    cursor: pointer;
+}
+
+#fb{
+    width:26px;
+    height: 24px;
+    left:-100px;
+}
+
+#email{
+    width:28px;
+    left:-95px;
 }
 
 
 @media screen and (max-width: 768px) {
+    h1{
+        width:84%;
+    }
+    header{
+        width:100vw;
+        background-color: #000;
+        color:white;
+    }
+    footer {
+        width :100vw;
+    }
 
     footer h3{
         padding-left:100px;
     }
-
     header h3{
-        padding: 20px 0 0 50px ;
+        padding-left:8%;
+    }
+    #icon{
+        padding-right: 5%;
+    }
+    .sidebar{
+        width:200px;
     }
     
     .card-container{
@@ -122,3 +233,14 @@ footer{
     }
 
 }    
+
+@keyframes fadeIn {
+    from{
+            transform: translateY(200px);
+            opacity: 0;
+    }
+    to{
+            transform: translateY(0);
+            opacity: 100%;
+    }
+}

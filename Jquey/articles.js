@@ -1,5 +1,21 @@
 
 $(document).ready(function() {
+    
+    const icon=$("#icon");
+    const sidebar=$(".sidebar");
+    const close=$("#close");
+    
+    
+    icon.click(function(){
+    
+        sidebar.addClass("see");
+    });
+    
+    close.click(function(){
+        sidebar.removeClass("see");
+    });
+
+
     // Function to add 'in-view' class when element is visible
     function onIntersection(entries, observer) {
         entries.forEach(entry => {
@@ -12,7 +28,7 @@ $(document).ready(function() {
 
     // Create a new Intersection Observer
     let observer = new IntersectionObserver(onIntersection, {
-        threshold: 0.1 // Trigger when 10% of the element is visible
+        threshold: 0 // Trigger when 10% of the element is visible
     });
 
     // Observe all elements with .animate and .animateText classes
@@ -39,6 +55,8 @@ for (var i = 0; i < btn.length; i++) {
     num = (num + 1) % (len + 1);
     if (num === 0) num++;
 }
+
+
 });
 
 

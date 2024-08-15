@@ -6,19 +6,79 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     height: 100px;
+    width: 100%;
 }
 
 header h3{
-    display: inline-block;
-    padding: 20px 0 0 153px ;
+    display: inline;
+    margin-right: auto;
+    padding-left:10%;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
 }
+
+#icon {
+    font-size: 24px;
+    padding-right: 10%;
+    margin-left:auto;
+    cursor: pointer;
+}
+
+.sidebar {
+    position:fixed;
+    top: 0;
+    right: -450px;
+    width: 300px;
+    height: 100%;
+    background-color:black;
+    color: white;
+    transition: right 0.5s;
+    padding: 20px;
+    z-index: 1;
+
+}
+
+
+header ul li a:hover{
+    color: blue;
+
+}
+
+
+header ul li a{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 20px;
+   text-decoration: none;
+   color: white;
+}
+
+header ul li{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 20px;
+   
+}
+
+#close {
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.see{
+    right:0;
+}
+
 
 section{
     width: 80%;
@@ -92,6 +152,8 @@ article em::after{
 }
 
 footer{
+    position: static;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,7 +178,8 @@ footer img{
 }
 #fb{
     width:26px;
-    left:-105px;
+    height: 24px;
+    left:-100px;
 }
 
 #email{
@@ -198,6 +261,25 @@ a:hover, a:focus, a:active {
     bottom:5vh;
 }
 
+.change{
+    display: grid;
+    place-items: center;
+}
+
+
+
+/* .about-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us h1{
+    margin-right: auto;
+} */
+
+
  /* Animation */
 
 @keyframes slideLeftIn {
@@ -223,7 +305,7 @@ a:hover, a:focus, a:active {
 }
 
 .in-view.animate {
-    animation: slideLeftIn 1s ease-in forwards;
+    animation: slideLeftIn 0.7s ease-in forwards;
 }
 
 .in-view.animateText {
@@ -231,7 +313,10 @@ a:hover, a:focus, a:active {
 }
 
 @media screen and (max-width: 768px) {
-
+    header{
+        background-color: #000;
+        color:white;
+    }
     section img{
         width:300px;
         height: auto;
@@ -241,7 +326,10 @@ a:hover, a:focus, a:active {
     }
 
     header h3{
-        padding: 20px 0 0 50px ;
+        padding-left: 5%;
+    }
+    #icon{
+        padding-right:5%;
     }
     #workplace-img{
         width:350px;
@@ -255,5 +343,8 @@ a:hover, a:focus, a:active {
     }
     #names{
         bottom:0vh;
+    }
+    .sidebar{
+        width:200px;
     }
 }    

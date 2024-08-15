@@ -13,12 +13,16 @@ nav li{
     text-transform: uppercase;
 }
 a {
-    color: inherit;
+    color:black;
     text-decoration: none;
+    transition : font-size 0.3s ease-in-out;
 }
 
-a:hover, a:focus, a:active {
-    color: inherit; 
+a:hover{
+    color:#9986ae;
+    font-size: 20px;
+}
+a:hover, a:focus, a:active { 
     text-decoration: none; 
 }
 
@@ -153,7 +157,8 @@ footer img{
 }
 #fb{
     width:26px;
-    left:-105px;
+    height: 24px;
+    left:-100px;
 }
 
 #email{
